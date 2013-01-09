@@ -1,5 +1,21 @@
-.page-header
-  h1 home#show
   
 .body
-  p HOLA!
+  #map
+  
+  
+  
+
+// Import mapbox files
+!= javascript_include_tag('http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js')
+!= stylesheet_link_tag("http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css")
+
+// Import Leaflet
+!= javascript_include_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.js")
+!= stylesheet_link_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.css")
+
+
+!= javascript_include_tag('map')
+
+  
+.hide
+

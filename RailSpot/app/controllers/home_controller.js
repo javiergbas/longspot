@@ -1,7 +1,7 @@
 load('application');
 
 action('index', function () {
-  render({
-  });
+  this.title = 'Welcome!';
+  render();
 });
 

@@ -7,9 +7,10 @@ html
     != csrf_meta_tag()
   body
     .navbar
-        .navbar-inner
-            .container
-               a.brand(href='#') Project name
+      .navbar-inner
+        .container
+          a.brand(href='#') RailSpot
+              span Find your way
 
     .container
       - var flash = request.flash('info').pop(); if (flash) {
@@ -23,5 +24,5 @@ html
       != body
 
       hr
-      footer
-        p © Company 2012
+    
+      include ../shared/footer.jade
