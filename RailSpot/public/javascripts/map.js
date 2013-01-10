@@ -5,11 +5,11 @@ spots_skate = [{name: 'Spot en Mallorca', lng: '1', lat: '40'},{name: 'Otro Spot
 
 $().ready(function(){
 
-  // Adjust #map height on window resize
+  /*/ Adjust #map height on window resize
   $('#map').css('height', $(window).height()-140);
   $(window).resize(function() {
     $('#map').css('height', $(window).height()-140);
-  });
+  });*/
 
 
 
@@ -25,6 +25,12 @@ $().ready(function(){
     tmp = L.marker([spots_longboard[i].lat, spots_longboard[i].lng], {title: spots_longboard[i].name}).bindPopup(spots_longboard[i].name);
     longboard_points.push(tmp);
   }
+  
+  
+  // Random point
+  L.marker([40, -6], {title: 'Random one'}).bindPopup('<b>Random one</b><br/><a href="/spots/2">Ver más</a>').addTo(map);
+  
+  
   
   var empty_layer = L.layerGroup([]);
   var longboard_layer = L.layerGroup(longboard_points);

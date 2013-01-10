@@ -9,20 +9,19 @@ html
     .navbar
       .navbar-inner
         .container
-          a.brand(href='#') RailSpot
+          a.brand(href='/') RailSpot
               span Find your way
-
-    .container
-      - var flash = request.flash('info').pop(); if (flash) {
-        .alert-message.info= flash
-      - }
-
-      - flash = request.flash('error').pop(); if (flash) {
-        .alert-message.error= flash
-      - }
-
-      != body
-
-      hr
     
-      include ../shared/footer.jade
+    - var flash = request.flash('info').pop(); if (flash) {
+      .alert-message.info= flash
+    - }
+
+    - flash = request.flash('error').pop(); if (flash) {
+      .alert-message.error= flash
+    - }
+
+    != body
+
+    hr
+  
+    include ../shared/footer.jade
