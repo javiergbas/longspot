@@ -1,1 +1,5 @@
-### Welcome to CompoundJS ###
+### RailSpot ###
+
+A spotland version using CompoundJS
+
+
