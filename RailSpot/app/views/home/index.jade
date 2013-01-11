@@ -1,71 +1,69 @@
-  
 
-#map_wrapper
-  #message_wrapper
-    span.alert A place for messages
-      a(href="#") Cancelar
+.explore
+  #map_wrapper
+    #message_wrapper
+      span.alert A place for messages
+        a(href="#") Cancelar
 
-  #map_controls
-    a#show_arrow(href="#")
-      span.icon-chevron-left
+    #map_controls
+      a#show_arrow(href="#")
+        span.icon-chevron-left
 
-      a#add_spot_btn.btn.pull-right
-        i.icon-plus-sign
-        span Crear
+        a#add_spot_btn.btn.pull-right
+          i.icon-plus-sign
+          span Crear
 
-    #add_form
-      .title Add your Spot!
+      #add_form
+        .title Add your Spot!
     
-      .message.alert Click on the map
+        .message.alert Click on the map
       
-      form#add_spot
-        span Adding a Spot at 
-        span.lng
-        span ,
-        span.lat
+        form#add_spot
+          span Adding a Spot at 
+          span.lng
+          span ,
+          span.lat
         
-        input(type="text",placeholder="Spot name")
-        select(multiple="multiple")
-          option Longboard
-          option Skate
-          option BMX
-          option Roller
+          input(type="text",placeholder="Spot name")
+          select(multiple="multiple")
+            option Longboard
+            option Skate
+            option BMX
+            option Roller
           
-        a#create_spot.btn.btn-primary Add
+          a#create_spot.btn.btn-primary Add
 
 
-    #filters
-      .title 
-        i.icon-road 
-        span Explora
-      ul
-        li
-          input#all(type="checkbox")
-          label(for="all") Todos
-        li 
-          input#skate(type="checkbox")
-          label(for="skate") Skate
-        li 
-          input#longboard(type="checkbox")
-          label(for="longboard") Longboard
+      #filters
+        .title 
+          i.icon-road 
+          span Explora
+        ul
+          li
+            input#all(type="checkbox")
+            label(for="all") Todos
+          li 
+            input#skate(type="checkbox")
+            label(for="skate") Skate
+          li 
+            input#longboard(type="checkbox")
+            label(for="longboard") Longboard
     
     
-  #explore_map
+    #explore_map
   
   
   
 
-// Import mapbox files
-//!= javascript_include_tag('http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js')
-//!= stylesheet_link_tag("http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css")
+  // Import mapbox files
+  //!= javascript_include_tag('http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js')
+  //!= stylesheet_link_tag("http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css")
 
-// Import Leaflet
-!= javascript_include_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.js")
-!= stylesheet_link_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.css")
+  // Import Leaflet
+  != javascript_include_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.js")
+  != stylesheet_link_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.css")
 
 
-!= javascript_include_tag('explore_map')
+  != javascript_include_tag('explore_map')
 
-  
-.hide
 

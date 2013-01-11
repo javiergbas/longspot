@@ -48,81 +48,98 @@ body
     font-size: 12px
     margin-left:10px
 
-#map_wrapper
-  position:relative
+.explore
+  #map_wrapper
+    position:relative
 
-  #message_wrapper
-    display none
-    position absolute
-    top 0
-    width 100%
-    text-align center
-    z-index 99
-    .alert
-      padding: 8px 14px;
-      a
-        margin-left 10px
-        color #C09853
-        font-size: 90%;
+    #message_wrapper
+      display none
+      position absolute
+      top 0
+      width 100%
+      text-align center
+      z-index 99
+      .alert
+        padding: 8px 14px;
+        a
+          margin-left 10px
+          color #C09853
+          font-size: 90%;
 
-  #map_controls
-    box-sizing(border-box)
-    width 280px
-    height 100%
-    padding 20px
-    position absolute
-    left 0
-    bottom  0
-    z-index 99
-    background  white
-    background  rgba(255,255,255,0.95)
-    border-right  1px solid #777
-    transition(all 0.6s ease-out 0s)
+    #map_controls
+      box-sizing(border-box)
+      width 280px
+      height 100%
+      padding 20px
+      position absolute
+      left 0
+      bottom  0
+      z-index 99
+      background  white
+      background  rgba(255,255,255,0.95)
+      border-right  1px solid #777
+      transition(all 0.6s ease-out 0s)
     
 
-    &.minimized
-      left  -@width
+      &.minimized
+        left  -@width
 
-    #show_arrow
-      box-sizing(border-box)
-      width: 25px
-      height: 30px
-      padding: 3px 0 0 5px
-      position: absolute
-      right: -25px
-      background: white
-      background: rgba(255, 255, 255, 0.95)
-      border: 1px solid #777
-      border-left: none
-      border-radius(0 4px 4px 0)
-      cursor:pointer
-      span
-        opacity 0.7
-      &:hover span
-        opacity 1
+      #show_arrow
+        box-sizing(border-box)
+        width: 25px
+        height: 30px
+        padding: 3px 0 0 5px
+        position: absolute
+        right: -25px
+        background: white
+        background: rgba(255, 255, 255, 0.95)
+        border: 1px solid #777
+        border-left: none
+        border-radius(0 4px 4px 0)
+        cursor:pointer
+        span
+          opacity 0.7
+        &:hover span
+          opacity 1
 
-    #add_form
-      display none
+      #add_form
+        display none
 
-    .title
-      margin-top 40px
+      .title
+        margin-top 40px
       
-      > span
-        margin-right 10px
+        > span
+          margin-right 10px
 
-    ul, li
-      list-style:none
+      ul, li
+        list-style:none
       
-    input[type="checkbox"]
-      display: inline-block
-      margin: 0 10px 0 0
-    label
-      display: inline-block
+      input[type="checkbox"]
+        display: inline-block
+        margin: 0 10px 0 0
+      label
+        display: inline-block
 
-  #explore_map
-    width:100%
-    min-height:300px
+    #explore_map
+      width:100%
+      min-height:300px
 
+.show_spot
+  .page-header
+  
+    h1 
+      display inline-block
+      
+    .categories, .sub-categories
+      display inline-block
+      color #666
+      margin-left 10px
+      font-size 20px
+      
 
-
+   
+  
+  #spot_map
+    height 260px
+    
   

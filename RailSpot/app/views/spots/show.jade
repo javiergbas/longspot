@@ -1,11 +1,23 @@
 .show_spot
   .page-header
     h1 #{spot_name}
-    .category Longboard
-    .speciality dancing, flat
+    .categories Longboard:
+    .sub-categories dancing, flat
       
   #spot_map
-    | (MAPA)
+    
+    
+  // Import Leaflet
+  != javascript_include_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.js")
+  != stylesheet_link_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.css")
+  
+  script
+    map = L.map('spot_map').setView([40, 2], 5);L.tileLayer('http://{s}.tiles.mapbox.com/v3/jgbas67.map-ayqdih62/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; Some attributions',
+        maxZoom: 18
+    }).addTo(map)
+
+    
   
   
   
