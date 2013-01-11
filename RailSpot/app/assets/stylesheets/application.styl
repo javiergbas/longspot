@@ -24,7 +24,16 @@ transform(args...)
   -o-transform args
   -khtml-transform args 
   
-  
+transition(args...) 
+ transition args
+ -moz-transition args
+ -webkit-transition args
+ -o-transition args
+
+box-sizing()
+  -webkit-box-sizing: arguments
+  -moz-box-sizing: arguments
+  box-sizing: arguments
   
 
 body
@@ -37,17 +46,53 @@ body
 #map_wrapper
   position:relative
 
+  #message_wrapper
+    position absolute
+    top 0
+    width 100%
+    text-align center
+    z-index 99
+    .alert
+      padding: 8px 14px;
+      a
+        margin-left 10px
+        color #C09853
+        font-size: 90%;
+
   #map_controls
-    position:absolute
-    width:240px
-    height:300px
-    left:0
-    top: 99px
-    z-index:999
-    background: rgba(255,255,255,0.9)
-    border-top: 1px solid #777
-    border-right: 1px solid #777
+    box-sizing(border-box)
+    width 240px
+    height 300px
+    padding 20px
+    position absolute
+    left 0
+    bottom  0
+    z-index 99
+    background  white
+    background  rgba(255,255,255,0.95)
+    border-top  1px solid #777
+    border-right  1px solid #777
     border-radius(0 10px 0 0)
+    transition(all 0.6s ease-out 0s)
+    
+
+    &.minimized
+      left  -@width
+
+    #show_arrow
+      box-sizing(border-box)
+      width: 20px
+      height: 25px
+      padding: 1px 0 0 2px
+      position: absolute
+      right: -20px
+      background: white
+      background: rgba(255, 255, 255, 0.95)
+      border: 1px solid #777
+      border-left: none
+      border-radius(0 4px 4px 0)
+      cursor:pointer
+        
 
     .title
       > span
