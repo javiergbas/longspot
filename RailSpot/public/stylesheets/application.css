@@ -1,7 +1,13 @@
 body {
   background: #fafafa;
 }
-.brand span {
+.btn i {
+  margin-right: 6px;
+}
+.navbar {
+  margin-bottom: 0 !important;
+}
+.navbar .brand span {
   font-size: 12px;
   margin-left: 10px;
 }
@@ -9,6 +15,7 @@ body {
   position: relative;
 }
 #map_wrapper #message_wrapper {
+  display: none;
   position: absolute;
   top: 0;
   width: 100%;
@@ -27,8 +34,8 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 240px;
-  height: 300px;
+  width: 280px;
+  height: 100%;
   padding: 20px;
   position: absolute;
   left: 0;
@@ -36,28 +43,24 @@ body {
   z-index: 99;
   background: #fff;
   background: rgba(255,255,255,0.95);
-  border-top: 1px solid #777;
   border-right: 1px solid #777;
-  -webkit-border-radius: 0 10px 0 0;
-  -moz-border-radius: 0 10px 0 0;
-  border-radius: 0 10px 0 0;
   transition: all 0.6s ease-out 0s;
   -moz-transition: all 0.6s ease-out 0s;
   -webkit-transition: all 0.6s ease-out 0s;
   -o-transition: all 0.6s ease-out 0s;
 }
 #map_wrapper #map_controls.minimized {
-  left: -240px;
+  left: -280px;
 }
 #map_wrapper #map_controls #show_arrow {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 20px;
-  height: 25px;
-  padding: 1px 0 0 2px;
+  width: 25px;
+  height: 30px;
+  padding: 3px 0 0 5px;
   position: absolute;
-  right: -20px;
+  right: -25px;
   background: #fff;
   background: rgba(255,255,255,0.95);
   border: 1px solid #777;
@@ -67,10 +70,33 @@ body {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
+#map_wrapper #map_controls #show_arrow span {
+  opacity: 0.7;
+}
+#map_wrapper #map_controls #show_arrow:hover span {
+  opacity: 1;
+}
+#map_wrapper #map_controls #add_form {
+  display: none;
+}
+#map_wrapper #map_controls .title {
+  margin-top: 40px;
+}
 #map_wrapper #map_controls .title > span {
   margin-right: 10px;
 }
-#map_wrapper #map {
+#map_wrapper #map_controls ul,
+#map_wrapper #map_controls li {
+  list-style: none;
+}
+#map_wrapper #map_controls input[type="checkbox"] {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+#map_wrapper #map_controls label {
+  display: inline-block;
+}
+#map_wrapper #explore_map {
   width: 100%;
-  height: 400px;
+  min-height: 300px;
 }

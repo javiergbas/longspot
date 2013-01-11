@@ -9,39 +9,62 @@
     a#show_arrow(href="#")
       span.icon-chevron-left
 
-    .title 
-      span.icon-road 
-      span Explora
-    ul
-      li Todos
-      li Skate
-      li Longboard
-      li Rutas Longboard
+      a#add_spot_btn.btn.pull-right
+        i.icon-plus-sign
+        span Crear
+
+    #add_form
+      .title Add your Spot!
     
-    .title
-      span.icon-map-marker
-      span Crea
-    ul
-      li Spot
-      li Ruta
-      li Shop
+      .message.alert Click on the map
+      
+      form#add_spot
+        span Adding a Spot at 
+        span.lng
+        span ,
+        span.lat
+        
+        input(type="text",placeholder="Spot name")
+        select(multiple="multiple")
+          option Longboard
+          option Skate
+          option BMX
+          option Roller
+          
+        a#create_spot.btn.btn-primary Add
+
+
+    #filters
+      .title 
+        i.icon-road 
+        span Explora
+      ul
+        li
+          input#all(type="checkbox")
+          label(for="all") Todos
+        li 
+          input#skate(type="checkbox")
+          label(for="skate") Skate
+        li 
+          input#longboard(type="checkbox")
+          label(for="longboard") Longboard
     
     
-  #map
+  #explore_map
   
   
   
 
 // Import mapbox files
-!= javascript_include_tag('http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js')
-!= stylesheet_link_tag("http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css")
+//!= javascript_include_tag('http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js')
+//!= stylesheet_link_tag("http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css")
 
 // Import Leaflet
 != javascript_include_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.js")
 != stylesheet_link_tag("http://cdn.leafletjs.com/leaflet-0.4/leaflet.css")
 
 
-!= javascript_include_tag('map')
+!= javascript_include_tag('explore_map')
 
   
 .hide
